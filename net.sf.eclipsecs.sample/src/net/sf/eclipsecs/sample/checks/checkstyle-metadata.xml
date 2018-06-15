@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE checkstyle-metadata PUBLIC
+"-//eclipse-cs//DTD Check Metadata 1.1//EN"
+"http://eclipse-cs.sourceforge.net/dtds/checkstyle-metadata_1_1.dtd">
+<checkstyle-metadata>
+    <rule-group-metadata name="My custom checks"  priority="1600">
+        <description>%MyCustomChecks.desc</description>
+
+        <rule-metadata name="%MethodLimit.name" internal-name="MethodLimit" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.MethodLimitCheck" />
+            <description>%MethodLimit.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="30">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+            <quickfix classname="net.sf.eclipsecs.sample.checks.MethodLimitQuickfix" />
+        </rule-metadata>
+        
+        <rule-metadata name="%NumComments.name" internal-name="NumComments" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.NumCommentsCheck" />
+            <description>%NumComments.desc</description>
+            <quickfix classname="net.sf.eclipsecs.sample.checks.MethodLimitQuickfix" />
+        </rule-metadata>
+        
+        <rule-metadata name="%NumCommentLines.name" internal-name="NumCommentLines" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.NumCommentLinesCheck" />
+            <description>%NumCommentLines.desc</description>
+            <quickfix classname="net.sf.eclipsecs.sample.checks.MethodLimitQuickfix" />
+        </rule-metadata>
+        
+        <rule-metadata name="%NumVarDecs.name" internal-name="NumVarDecs" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.NumVarDeclarationsCheck" />
+            <description>%NumVarDecs.desc</description>
+            <quickfix classname="net.sf.eclipsecs.sample.checks.MethodLimitQuickfix" />
+        </rule-metadata>
+
+        <rule-metadata internal-name="NumOperators" name="%NumOperators.name"
+        	parent="TreeWalker">
+        	<alternative-name internal-name="net.sf.eclipsecs.sample.checks.NumOperators" /><description>%NumOperators.desc</description>
+        	<quickfix
+        		classname="net.sf.eclipsecs.sample.checks.MethodLimitQuickfix" />
+        </rule-metadata>
+        
+        <rule-metadata internal-name="NumOperands" name="%NumOperands.name"
+        	parent="TreeWalker">
+        	<alternative-name internal-name="net.sf.eclipsecs.sample.checks.NumOperands" ></alternative-name>
+        	<description>%NumOperands.desc</description>
+        	<quickfix classname="net.sf.eclipsecs.sample.checks.MethodLimitQuickfix" />
+        </rule-metadata>
+		
+		<rule-metadata name="%NumCasts.name" internal-name="NumCasts" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.NumCastsCheck" />
+            <description>%NumCasts.desc</description>
+            <quickfix classname="net.sf.eclipsecs.sample.checks.MethodLimitQuickfix" />
+        </rule-metadata>
+        
+    </rule-group-metadata>
+</checkstyle-metadata>
